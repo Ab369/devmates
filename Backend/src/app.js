@@ -3,6 +3,7 @@ const app=express();
 const connectDB=require('./config/db');
 const cookieParser=require('cookie-parser');
 const cors=require('cors');
+require('../src/utils/cronJobs')
 
 app.use(cors({
     origin: 'http://localhost:5173',

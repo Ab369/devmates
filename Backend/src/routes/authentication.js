@@ -2,10 +2,11 @@ const app=require('express');
 const router=app.Router();
 const user=require('../models/user');
 const bcrypt=require('bcrypt')
+const sendMail=require('../utils/transporter')
 
 router.get('/check',async(req,res)=>{
     try{
-        await sendMail("abcd@gmail.com","cabbro220@gmail.com")
+        await sendMail("ompbabhinav2@gmail.com","test-mail","body of the mail");
         res.json({message:'checked'});
     }
     catch(err){
